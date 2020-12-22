@@ -10,21 +10,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
+```javascript
+var WebSocketServer = require('ws').Server; var Net = require('net'); var wss = new WebSocketServer({port: 8181}); var upstream = Net.connect({host: '10.59.97.214', port: 6379}, function(){ console.log('Ok, connected to server'); }); var conn = null; wss.on('connection', function (_conn){ console.log('client connected'); conn = _conn; conn.on('message', function (message){ console.log('[WS-R], received data'); console.log(message); console.log('[WS-T], forward to upstream'); upstream.write(message); }); }); upstream.on('data', function(data){ console.log('[US-R], received data'); console.log(data.toString()); console.log('[US-T], response to downstream'); conn.send(data); }); upstream.on('end', function(){ console.log('Ok, close connection'); });
 [Link](url) and ![Image](src)
 ```
 
