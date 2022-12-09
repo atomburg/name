@@ -3,6 +3,6 @@
 remote_theme: pages-themes/architect@v0.2.0
 title: atomburg
 show_downloads: false
-description : "atomburg"
+description : "@tomburg.com"
 plugins:
 - jekyll-remote-theme 
