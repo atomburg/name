@@ -1,8 +1,8 @@
 #theme: jekyll-theme-cayman
 #theme: minima
 remote_theme: pages-themes/architect@v0.2.0
-title: atomburg.com
+title: name.atomburg.com
 show_downloads: false
-description : "atomburg"
+description : "name.atomburg.com"
 plugins:
 - jekyll-remote-theme 
